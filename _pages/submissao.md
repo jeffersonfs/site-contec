@@ -8,6 +8,17 @@ nav_order: 4
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
+<style>
+  /* Esconde o cabeçalho automático externo */
+  .post > header.post-header {
+    display: none !important;
+  }
+</style>
+
+<header class="post-header" style="display: block !important;">
+  <h1 class="post-title"><i class="fa-solid fa-file-pdf" style="color: var(--global-theme-color); margin-right: 0.5rem; display: none;"></i>Submissões de Trabalhos Científicos</h1>
+</header>
+
 <div class="max-w-4xl mx-auto text-center sm:text-left my-6">
     <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
         Chamada oficial para submissão de trabalhos científicos do <strong>III CONTEC MATOPIBA</strong> (Edital nº 02/2026). Convidamos estudantes, pesquisadores e profissionais a submeterem artigos científicos originais.
