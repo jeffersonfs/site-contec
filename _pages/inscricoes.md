@@ -78,7 +78,7 @@ nav_order: 3
     <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-circle-info" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Observações Importantes</h3>
     <ul style="padding-left: 1.25rem; line-height: 1.6; font-size: 0.9rem; color: var(--global-text-color); margin: 0;">
         <li style="margin-bottom: 0.5rem;"><strong>Autores de Trabalhos</strong>: Autores que pretendem submeter resumos ou artigos devem obrigatoriamente realizar a inscrição no SIGEventos para homologação dos aceites e publicação nos Anais do evento.</li>
-        <li><strong>Credenciamento Presencial</strong>: A retirada de crachás e material de apoio ocorrerá no dia <strong>19 de outubro de 2026, a partir das 14h30</strong>, no Bloco de Pedagógico do CCBL UFMA.</li>
+        <li><strong>Credenciamento Presencial</strong>: ocorrerá no dia <strong>19 de outubro de 2026, a partir das 14h30</strong>, no Bloco de Pedagógico do CCBL UFMA.</li>
     </ul>
 </div>
 

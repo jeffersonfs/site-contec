@@ -37,11 +37,17 @@ permalink: /desafios/pontes/
 </div>
 
 <div class="my-8 text-center sm:text-left">
-    <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--global-text-color); margin-bottom: 1.5rem;"><i class="fa-solid fa-file-invoice" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Edital e Regulamento</h3>
+    <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--global-text-color); margin-bottom: 1.5rem;"><i class="fa-solid fa-file-signature" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Inscrição e Regulamento</h3>
     <p class="text-slate-700 dark:text-slate-300 mb-6" style="font-size: 0.9rem;">
-        Antes de iniciar a construção do seu protótipo, é fundamental ler atentamente todas as regras de dimensões, materiais permitidos e critérios de pontuação no edital oficial.
+        As inscrições de equipes para o Desafio de Pontes devem ser feitas online pelo formulário oficial. Certifique-se de ler atentamente todas as regras e requisitos no edital antes de iniciar a construção do seu protótipo.
     </p>
-    <a href="{{ '/assets/docs/Edital_Competicao_Pontes.pdf' | relative_url }}" download class="kn-btn-primary" style="display: inline-block; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">
-        <i class="fa-solid fa-file-pdf" style="margin-right: 0.5rem;"></i>Baixar Edital Desafio das Pontes (PDF) &rarr;
-    </a>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: flex-start; align-items: center;">
+        <a href="https://forms.gle/VWMpb56PbWNfNcpe7" target="_blank" rel="noopener noreferrer" class="kn-btn-primary" style="display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold; min-height: unset;">
+            <i class="fa-solid fa-pen-to-square" style="margin-right: 0.5rem;"></i>Inscrever Equipe &rarr;
+        </a>
+        <a href="{{ '/assets/docs/Edital_Competicao_Pontes.pdf' | relative_url }}" download class="kn-btn-secondary" style="display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold; border: 1px solid var(--global-divider-color); min-height: unset;">
+            <i class="fa-solid fa-file-pdf" style="margin-right: 0.5rem;"></i>Baixar Edital Desafio das Pontes (PDF)
+        </a>
+    </div>
 </div>
+

@@ -19,27 +19,31 @@ permalink: /desafios/fotografia/
     
     <div style="display:flex; flex-direction:column; gap:1.25rem;">
         <div style="padding: 1.5rem; border-radius: 16px; border: 1px solid var(--global-divider-color); background-color: var(--global-card-bg);">
-            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-camera-retro" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Coordenação e Tema</h4>
+            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-people-carry-box" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Coordenação e Tema</h4>
             <p style="font-size: 0.9rem; color: var(--global-text-color); line-height: 1.5; margin: 0;">
-                Coordenado pela <strong>Dra. Gislane Pinho de Oliveira</strong>, o concurso deste ano tem como tema oficial: <em>"Minha contribuição para resolução de problemas complexos"</em>.
+                O concurso é coordenado pela <strong>Dra. Gislane Pinho de Oliveira</strong>. O concurso deste ano tem como tema oficial: <em>"Minha contribuição para resolução de problemas complexos"</em>.
             </p>
         </div>
 
         <div style="padding: 1.5rem; border-radius: 16px; border: 1px solid var(--global-divider-color); background-color: var(--global-card-bg);">
-            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-images" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Exposição e Avaliação</h4>
-            <p style="font-size: 0.9rem; color: var(--global-text-color); line-height: 1.5; margin: 0;">
-                As fotografias pré-selecionadas serão expostas fisicamente no corredor central do evento para a avaliação do júri técnico especializado e votação aberta do público participante.
-            </p>
+            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-calendar-days" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Cronograma Importante</h4>
+            <ul style="font-size: 0.9rem; color: var(--global-text-color); line-height: 1.6; margin: 0 0 0 1.25rem; padding: 0;">
+                <li><strong>Início das Inscrições e Envio:</strong> Em breve (acompanhe as novidades)</li>
+                <li><strong>Exposição das Obras Selecionadas:</strong> Durante o evento (19 a 23 de outubro de 2026)</li>
+                <li><strong>Avaliação e Votação Popular:</strong> No corredor central do CCBL UFMA</li>
+            </ul>
         </div>
     </div>
 </div>
 
 <div class="my-8 text-center sm:text-left">
-    <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--global-text-color); margin-bottom: 1.5rem;"><i class="fa-solid fa-file-invoice" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Regras e Inscrição</h3>
+    <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--global-text-color); margin-bottom: 1.5rem;"><i class="fa-solid fa-file-signature" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Inscrição e Regulamento</h3>
     <p class="text-slate-700 dark:text-slate-300 mb-6" style="font-size: 0.9rem;">
-        Verifique as regras de submissão, formato e requisitos de resolução de imagem no regulamento oficial.
+        As inscrições e o regulamento oficial do Concurso de Fotografia serão divulgados em breve. Para acompanhar o lançamento do edital e novidades em tempo real, siga nosso perfil oficial no Instagram.
     </p>
-    <a href="{{ '/assets/docs/cartazinscriçoesequipe.pdf' | relative_url }}" download class="kn-btn-primary" style="display: inline-block; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">
-        <i class="fa-solid fa-file-pdf" style="margin-right: 0.5rem;"></i>Baixar Regulamento e Cartaz (PDF) &rarr;
-    </a>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: flex-start; align-items: center;">
+        <a href="https://www.instagram.com/contec.matopiba2026/" target="_blank" rel="noopener noreferrer" class="kn-btn-primary" style="display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold; min-height: unset;">
+            <i class="fa-brands fa-instagram" style="margin-right: 0.5rem; font-size: 1.1rem;"></i>Acompanhar no Instagram &rarr;
+        </a>
+    </div>
 </div>

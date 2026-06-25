@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Sobre o Evento
+title: Sobre
 permalink: /sobre/
 nav: true
 nav_order: 1
@@ -13,9 +13,8 @@ O **III Congresso de Tecnologia, Engenharia e Ciência (CONTEC)** é uma iniciat
 Antes de sua criação, as atividades científicas do campus ocorriam de forma fragmentada em eventos organizados por cursos específicos. A partir de 2024, essas iniciativas foram consolidadas em um único congresso multidisciplinar, ampliando a interação de discentes e docentes com o setor produtivo e a sociedade.
 
 ### <i class="fa-solid fa-clock-rotate-left" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Histórico do Evento
-
-- **I CONTEC (2024)**: Realizado de 25 a 29 de novembro de 2024, com o tema _“Inovação Tecnológica e Sustentabilidade: Caminhos para o Futuro”_. Reuniu centenas de participantes com palestras, minicursos, visitas técnicas e debates sobre fontes de energias renováveis e desenvolvimento regional.
-- **II CONTEC (2025)**: Realizado de 19 a 23 de outubro de 2025, sob o tema _“Maranhão Inteligente para o Desenvolvimento Sustentável”_, introduzindo desafios de robótica e a III Corrida em Trilha do CCBL.
+- <strong><a href="https://www.contecmatopiba.com/" target="_blank" rel="noopener noreferrer" title="I CONTEC (2024)">I CONTEC (2024)</a></strong>: Realizado de 25 a 29 de novembro de 2024, com o tema _“Inovação Tecnológica e Sustentabilidade: Caminhos para o Futuro”_. Reuniu centenas de participantes com palestras, minicursos, visitas técnicas e debates sobre fontes de energias renováveis e desenvolvimento regional.
+- <strong><a href="https://www.even3.com.br/e/ii-contec-matopiba-607398" target="_blank" rel="noopener noreferrer" title="II CONTEC (2025)">II CONTEC (2025)</a></strong>: Realizado de 19 a 23 de outubro de 2025, sob o tema _“Maranhão Inteligente para o Desenvolvimento Sustentável”_, introduzindo desafios de robótica e a III Corrida em Trilha do CCBL.
 - **III CONTEC (2026)**: A ser realizado de 17 a 23 de outubro de 2026, com o tema _“Saberes conectados: para resolução de problemas complexos”_.
 
 ### <i class="fa-solid fa-compass" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Eixos e Alinhamento Estratégico

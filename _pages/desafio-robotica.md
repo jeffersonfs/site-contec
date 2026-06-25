@@ -19,27 +19,34 @@ permalink: /desafios/robotica/
     
     <div style="display:flex; flex-direction:column; gap:1.25rem;">
         <div style="padding: 1.5rem; border-radius: 16px; border: 1px solid var(--global-divider-color); background-color: var(--global-card-bg);">
-            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-graduation-cap" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Foco e Coordenação</h4>
+            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-people-carry-box" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Coordenação e Execução</h4>
             <p style="font-size: 0.9rem; color: var(--global-text-color); line-height: 1.5; margin: 0;">
-                Organizado pelo <strong>Prof. Gustavo</strong>, o desafio avalia o desenvolvimento de protótipos autônomos e integrados focados em solucionar problemas agroindustriais e de automação regional da região do MATOPIBA.
+                O desafio é coordenado pelo <strong>Prof. Gustavo</strong>. A competição envolve o desenvolvimento de protótipos autônomos e integrados focados em solucionar problemas agroindustriais e de automação regional no MATOPIBA.
             </p>
         </div>
 
         <div style="padding: 1.5rem; border-radius: 16px; border: 1px solid var(--global-divider-color); background-color: var(--global-card-bg);">
-            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-calendar-days" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Apresentação e Disputa</h4>
-            <p style="font-size: 0.9rem; color: var(--global-text-color); line-height: 1.5; margin: 0;">
-                A disputa de robôs e a demonstração pública dos protótipos em pista ocorrerá na <strong>terça-feira, 20 de outubro de 2026, às 20h30</strong>.
-            </p>
+            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-calendar-days" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Cronograma Importante</h4>
+            <ul style="font-size: 0.9rem; color: var(--global-text-color); line-height: 1.6; margin: 0 0 0 1.25rem; padding: 0;">
+                <li><strong>Inscrição das Equipes:</strong> Disponível no site oficial da competição</li>
+                <li><strong>Envio de Projetos / Homologação:</strong> Conforme especificações no edital</li>
+                <li><strong>Disputa e Demonstração em Pista:</strong> Terça-feira, 20 de outubro de 2026, às 20h30</li>
+            </ul>
         </div>
     </div>
 </div>
 
 <div class="my-8 text-center sm:text-left">
-    <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--global-text-color); margin-bottom: 1.5rem;"><i class="fa-solid fa-file-invoice" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Edital e Regulamento</h3>
+    <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--global-text-color); margin-bottom: 1.5rem;"><i class="fa-solid fa-file-signature" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Inscrição e Regulamento</h3>
     <p class="text-slate-700 dark:text-slate-300 mb-6" style="font-size: 0.9rem;">
-        Consulte as especificações técnicas de hardware, software livre e dimensões exigidas no edital completo da competição.
+        As inscrições de equipes para o Desafio de Robótica devem ser feitas online no site oficial da competição (DEROB). Certifique-se de ler atentamente todas as regras e requisitos no edital oficial.
     </p>
-    <a href="{{ '/assets/docs/Edital_Desafio_Robotica.pdf' | relative_url }}" download class="kn-btn-primary" style="display: inline-block; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold;">
-        <i class="fa-solid fa-file-pdf" style="margin-right: 0.5rem;"></i>Baixar Edital Desafio de Robótica (PDF) &rarr;
-    </a>
+    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: flex-start; align-items: center;">
+        <a href="https://eletrica.ccbl.ufma.br/derob/" target="_blank" rel="noopener noreferrer" class="kn-btn-primary" style="display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold; min-height: unset;">
+            <i class="fa-solid fa-file-signature" style="margin-right: 0.5rem;"></i>Inscrever Equipe &rarr;
+        </a>
+        <a href="{{ '/assets/docs/Edital_Desafio_Robotica.pdf' | relative_url }}" download class="kn-btn-secondary" style="display: inline-flex; align-items: center; padding: 0.75rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold; border: 1px solid var(--global-divider-color); min-height: unset;">
+            <i class="fa-solid fa-file-pdf" style="margin-right: 0.5rem;"></i>Baixar Edital Desafio de Robótica (PDF)
+        </a>
+    </div>
 </div>
