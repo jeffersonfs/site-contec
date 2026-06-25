@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://www.contecmatopiba.ufma.br/sitemap.xml
