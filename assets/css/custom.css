@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:wght@800;900&family=Outfit:wght@800;900&display=swap");
+
 /* Custom Styles for III CONTEC MATOPIBA */
 
 :root {
@@ -625,288 +627,384 @@
   }
 }
 
-/* --- KEYNOTE PREMIUM STYLE SYSTEM (Mobile First) --- */
+/* --- BANNER CAPA SITE 1 HERO SYSTEM --- */
 .kn-hero {
   position: relative;
   overflow: hidden;
-  /* Breakout of container to span full screen width */
   width: 100vw;
   left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  border-radius: 0; /* Flush edge-to-edge layout */
-
-  /* Fill the viewport height */
-  min-height: 80vh;
+  transform: translateX(-50%);
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+  min-height: clamp(520px, 60vw, 780px);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(240, 253, 244, 0.92) 100%), url("../img/tech_pattern_bg.jpg") no-repeat center center;
+  text-align: center;
+  background-color: #f6faf7;
+  background-image: url("../img/planodefundo1.png");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Parallax effect like Project Bluefin */
-  color: #0f172a !important;
-  border-bottom: 1px solid #cbd5e1;
-  padding: 5rem 2rem;
+  color: #004d40;
+  border-bottom: 1px solid #d1e7dd;
+  padding: 4.5rem 1.5rem 7rem 1.5rem;
   margin-bottom: 3.5rem;
-  margin-top: -2rem; /* Sit flush under the fixed header */
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+  margin-top: -2rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 77, 64, 0.05);
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
 }
-.kn-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(circle at 50% 0%, rgba(16, 185, 129, 0.06) 0%, transparent 60%);
-  z-index: 1;
-  pointer-events: none;
-}
-.kn-hero-grid {
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(to right, rgba(203, 213, 225, 0.3) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(203, 213, 225, 0.3) 1px, transparent 1px);
-  background-size: 4rem 4rem;
-  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
-  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
-  opacity: 0.5;
-  z-index: 1;
-}
+
+/* Main Content Container */
 .kn-hero-content {
   position: relative;
   z-index: 10;
-  max-width: 900px;
+  max-width: 880px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Title: III CONTEC MATOPIBA */
+.banner-title {
+  font-family:
+    "Outfit",
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0 0 1.25rem 0;
+  color: #004d40 !important;
+  text-transform: uppercase;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.kn-badge {
+
+.banner-title-main {
+  font-size: clamp(2.8rem, 6.5vw, 4.8rem);
+  display: block;
+  font-weight: 900;
+  color: #004d40 !important;
+}
+
+.banner-title-sub {
+  font-size: clamp(2.8rem, 6.5vw, 4.8rem);
+  display: block;
+  font-weight: 900;
+  color: #004d40 !important;
+}
+
+/* Subtitle: III CONGRESSO DE TECNOLOGIA, ENGENHARIA E CIÊNCIA DO MATOPIBA */
+.banner-subtitle {
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.02em;
+  color: #004d40 !important;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem 0;
+  max-width: 780px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Golden Pill Badge */
+.banner-pill-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.7rem;
-  padding: 0.6rem 1.75rem;
+  justify-content: center;
+  padding: 0.65rem 2rem;
   border-radius: 9999px;
-  background-color: rgba(16, 185, 129, 0.08);
-  border: 1px solid rgba(16, 185, 129, 0.25);
-  color: #065f46;
-  font-size: 1.25rem;
+  background: #f4b41a;
+  color: #004d40 !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(0.88rem, 1.8vw, 1.15rem);
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  text-decoration: none !important;
+  letter-spacing: 0.04em;
+  box-shadow: 0 4px 14px rgba(244, 180, 26, 0.35);
+  margin-bottom: 1.25rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.banner-pill-badge:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(244, 180, 26, 0.45);
+}
+
+.banner-pill-badge span {
+  color: #004d40 !important;
+}
+
+/* Location Accent Bar with Lines */
+.banner-location-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 420px;
   margin-bottom: 1.5rem;
-  transition: all 0.3s ease;
 }
-.kn-badge:hover {
-  background-color: rgba(16, 185, 129, 0.12);
-  border-color: rgba(16, 185, 129, 0.35);
+
+.banner-location-divider .banner-line {
+  flex: 1;
+  height: 2.5px;
+  background-color: #f4b41a;
+  border-radius: 2px;
 }
-.kn-badge-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #10b981;
-  box-shadow: 0 0 8px #10b981;
-  animation: kn-pulse 1.5s infinite;
-}
-@keyframes kn-pulse {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-  }
-}
-.kn-date-loc {
-  font-size: 0.85rem;
+
+.banner-location-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 800;
-  color: #cca025;
+  color: #004d40 !important;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 1rem;
+  white-space: nowrap;
 }
-.kn-title {
-  font-size: 2.25rem;
-  font-weight: 900;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  margin: 0 0 1.5rem 0;
-  color: #0f172a !important;
-  text-align: center;
-}
-.kn-title span {
-  background: linear-gradient(135deg, #00583a 0%, #15803d 50%, #cca025 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.kn-subtitle {
-  font-size: 1.1rem;
-  color: #475569 !important;
-  font-weight: 500;
-  max-width: 700px;
-  line-height: 1.6;
+
+/* Tagline Slogan (Handwriting / Script) */
+.banner-tagline {
+  font-family: "Caveat", "Dancing Script", cursive, sans-serif;
+  font-size: clamp(1.5rem, 3.2vw, 2.2rem);
+  font-weight: 700;
+  color: #8b1e26 !important;
+  line-height: 1.3;
   margin: 0 0 2rem 0;
-  text-align: center;
+  max-width: 750px;
+  letter-spacing: 0.01em;
 }
-.kn-desc {
-  font-size: 0.85rem;
-  color: #475569;
-  max-width: 600px;
-  line-height: 1.6;
-  margin: 0 0 2rem 0;
-}
+
+/* CTA Group Buttons */
 .kn-cta-group {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.25rem;
   width: 100%;
+  max-width: 620px;
 }
+
 .kn-btn-primary {
+  flex: 1;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 56px;
-  padding: 0.75rem 2.25rem;
+  min-height: 58px;
+  padding: 0.75rem 1.75rem;
   border-radius: 14px;
-  background: linear-gradient(135deg, #00583a 0%, #15803d 100%);
+  background: linear-gradient(135deg, #004d40 0%, #00695c 100%);
   color: #ffffff !important;
   border: none;
   text-decoration: none !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 88, 58, 0.2);
-  transition: all 0.2s ease;
+  box-shadow: 0 10px 20px -5px rgba(0, 77, 64, 0.3);
+  transition: all 0.25s ease;
   cursor: pointer;
 }
+
 .kn-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 15px 20px -3px rgba(0, 88, 58, 0.35);
-  opacity: 0.95;
+  box-shadow: 0 14px 24px -4px rgba(0, 77, 64, 0.45);
+  background: linear-gradient(135deg, #003d33 0%, #005b4f 100%);
 }
+
 .kn-btn-primary *,
 .kn-btn-primary span,
 .kn-btn-primary .kn-btn-title-main,
 .kn-btn-primary .kn-btn-subtext {
   color: #ffffff !important;
 }
+
 .kn-btn-secondary {
+  flex: 1;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 56px;
-  padding: 0.75rem 2.25rem;
+  min-height: 58px;
+  padding: 0.75rem 1.75rem;
   border-radius: 14px;
   background-color: #ffffff !important;
-  border: 1px solid #cbd5e1;
-  color: #334155 !important;
+  border: 2px solid #004d40;
+  color: #004d40 !important;
   text-decoration: none !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
   cursor: pointer;
 }
+
 .kn-btn-secondary:hover {
-  background-color: #f8fafc !important;
-  border-color: #94a3b8;
-  color: #0f172a !important;
+  background-color: #f0f7f4 !important;
+  border-color: #003d33;
+  color: #003d33 !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 12px -1px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
+
 .kn-btn-secondary *,
 .kn-btn-secondary span,
 .kn-btn-secondary .kn-btn-title-main {
-  color: #334155 !important;
+  color: #004d40 !important;
 }
+
 .kn-btn-secondary:hover *,
 .kn-btn-secondary:hover span,
 .kn-btn-secondary:hover .kn-btn-title-main {
-  color: #0f172a !important;
+  color: #003d33 !important;
 }
+
 .kn-btn-title-main {
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 750;
   display: block;
 }
+
 .kn-btn-subtext {
   font-size: 0.72rem;
-  font-weight: 500;
+  font-weight: 600;
   opacity: 0.85;
   margin-top: 0.15rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   display: block;
 }
+
 .kn-btn-primary .kn-btn-subtext {
   color: rgba(255, 255, 255, 0.85) !important;
 }
+
 .kn-btn-secondary .kn-btn-subtext {
-  color: #64748b !important;
-}
-.kn-btn-secondary:hover .kn-btn-subtext {
-  color: #475569 !important;
+  color: #004d40 !important;
+  opacity: 0.75;
 }
 
+/* Mobile & Responsive Background Scaling for planodefundo1.png */
+@media (min-width: 1200px) {
+  .kn-hero {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: 82vh;
+    padding: 5rem 2rem 7.5rem 2rem;
+    background-size: cover;
+    background-position: 50% 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .kn-hero {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: 520px;
+    padding: 3.5rem 1rem 6rem 1rem;
+    background-size: cover;
+    background-position: 50% 100%;
+  }
+  .kn-cta-group {
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+}
+
+/* Dark Theme Support */
 [data-theme="dark"] .kn-hero {
-  background: linear-gradient(135deg, rgba(9, 13, 22, 0.94) 0%, rgba(3, 33, 21, 0.92) 100%), url("../img/tech_pattern_bg.jpg") no-repeat center center;
+  background-color: #061412;
+  background-image: linear-gradient(135deg, rgba(6, 20, 18, 0.88) 0%, rgba(10, 33, 29, 0.88) 100%), url("../img/planodefundo1.png");
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  border-color: #1e293b;
+  border-color: #12332c;
   color: #ffffff !important;
 }
-[data-theme="dark"] .kn-hero-grid {
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  opacity: 0.25;
+
+[data-theme="dark"] .banner-title-main,
+[data-theme="dark"] .banner-title-sub,
+[data-theme="dark"] .banner-subtitle {
+  color: #ffffff !important;
 }
-[data-theme="dark"] .kn-badge {
-  background-color: rgba(16, 185, 129, 0.15) !important;
-  border-color: rgba(16, 185, 129, 0.35) !important;
+
+[data-theme="dark"] .banner-pill-badge {
+  background: #f4b41a;
+  color: #061412 !important;
+  box-shadow: 0 4px 14px rgba(244, 180, 26, 0.25);
+}
+
+[data-theme="dark"] .banner-pill-badge span {
+  color: #061412 !important;
+}
+
+[data-theme="dark"] .banner-location-text {
   color: #34d399 !important;
 }
-[data-theme="dark"] .kn-title {
-  color: #ffffff !important;
+
+[data-theme="dark"] .banner-line {
+  background-color: #f4b41a;
 }
-[data-theme="dark"] .kn-title span {
-  background: linear-gradient(135deg, #10b981 0%, #34d399 50%, #cca025 100%) !important;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
+
+[data-theme="dark"] .banner-tagline {
+  color: #f43f5e !important;
 }
-[data-theme="dark"] .kn-subtitle {
-  color: #cbd5e1 !important;
+
+[data-theme="dark"] .wm-rocket,
+[data-theme="dark"] .wm-robot,
+[data-theme="dark"] .wm-drone,
+[data-theme="dark"] .wm-bridge {
+  color: #34d399;
+  opacity: 0.15;
 }
-[data-theme="dark"] .kn-desc {
-  color: #94a3b8 !important;
+
+[data-theme="dark"] .kn-btn-secondary {
+  background-color: rgba(15, 30, 25, 0.8) !important;
+  border-color: #34d399;
+  color: #34d399 !important;
 }
-[data-theme="dark"] .kn-btn-secondary,
+
 [data-theme="dark"] .kn-btn-secondary *,
-[data-theme="dark"] .kn-btn-secondary span,
-[data-theme="dark"] .kn-btn-secondary .kn-btn-title-main {
-  color: #cbd5e1 !important;
+[data-theme="dark"] .kn-btn-secondary span {
+  color: #34d399 !important;
 }
-[data-theme="dark"] .kn-btn-secondary:hover,
-[data-theme="dark"] .kn-btn-secondary:hover *,
-[data-theme="dark"] .kn-btn-secondary:hover span,
-[data-theme="dark"] .kn-btn-secondary:hover .kn-btn-title-main {
-  color: #ffffff !important;
-}
+
 [data-theme="dark"] .kn-btn-secondary .kn-btn-subtext {
-  color: #94a3b8 !important;
+  color: #34d399 !important;
+  opacity: 0.85;
 }
-[data-theme="dark"] .kn-btn-secondary:hover .kn-btn-subtext {
-  color: #cbd5e1 !important;
+
+[data-theme="dark"] .kn-btn-secondary:hover {
+  background-color: rgba(25, 50, 42, 0.9) !important;
+  border-color: #6ee7b7;
+  color: #6ee7b7 !important;
+}
+
+[data-theme="dark"] .kn-btn-secondary:hover * {
+  color: #6ee7b7 !important;
 }
 
 /* Card Highlights Grid */
@@ -1771,4 +1869,3 @@ h3:not(.timeline-title):not(.kn-quick-title):not(.kn-slideshow-title):not(.count
   margin-top: 2.25rem !important;
   margin-bottom: 1.25rem !important;
 }
-

@@ -1,38 +1,44 @@
-<!-- Hero Section (Keynote Style) -->
+<!-- Hero Section (Banner Capa Site - BannerCapaSite1 Layout) -->
 <div class="kn-hero">
-    <div class="kn-hero-grid"></div>
-    <div class="kn-hero-content">
-        <!-- Event Brand Icon -->
-        <div class="kn-hero-logo-wrapper">
-            <img src="{{ '/assets/img/icone.png' | relative_url }}" alt="Ícone CONTEC" class="kn-hero-logo" />
-        </div>
+  <!-- Hero Main Banner Content -->
+  <div class="kn-hero-content">
+    <!-- Event Main Title -->
+    <h1 class="banner-title text-center" id="main-banner-heading">
+      <span class="banner-title-main">III CONTEC</span>
+      <span class="banner-title-sub">MATOPIBA</span>
+    </h1>
 
-        <!-- Event Name Badge -->
-        <div class="kn-badge">
-            <span class="kn-badge-dot"></span>
-            <span>III CONTEC MATOPIBA</span>
-        </div>
+    <!-- Event Subtitle / Description -->
+    <h2 class="banner-subtitle text-center">
+      <span>III CONGRESSO DE TECNOLOGIA,</span>
+      <span>ENGENHARIA E CIÊNCIA DO MATOPIBA</span>
+    </h2>
 
-        <!-- Título Comercial (Tema do Ano) -->
-        <h1 class="kn-title text-center">
-            <span>Saberes conectados para a resolução de problemas complexos</span>
-        </h1>
-        
-        <!-- Subtítulo Direto -->
-        <p class="kn-subtitle text-center">
-            Encontro de Tecnologia, Engenharia, Ciência e Inovação do MATOPIBA. <br class="d-none d-md-block">De 17 a 23 de outubro de 2026, no Centro de Ciência de Balsas.
-        </p>
-        
-        <!-- CTAs de Alto Impacto -->
-        <div class="kn-cta-group">
-            <a href="{{ '/inscricoes/' | relative_url }}" class="kn-btn-primary">
-                <span class="kn-btn-title-main">Inscreva-se Gratuitamente</span>
-                <span class="kn-btn-subtext">Passo a passo SIGEventos</span>
-            </a>
-            <a href="{{ '/submissao/' | relative_url }}" class="kn-btn-secondary">
-                <span class="kn-btn-title-main">Submeta seu Trabalho</span>
-                <span class="kn-btn-subtext">Até 30 de Setembro</span>
-            </a>
-        </div>
+    <!-- Golden Pill Date/Location Badge -->
+    <div class="banner-pill-badge" id="banner-date-badge">
+      <span>19-23 DE OUTUBRO DE 2026 - BALSAS/MA</span>
     </div>
+
+    <!-- Location Divider with Golden Lines -->
+    <div class="banner-location-divider" aria-label="Localização: Balsas/MA">
+      <span class="banner-line"></span>
+      <span class="banner-location-text">BALSAS/MA</span>
+      <span class="banner-line"></span>
+    </div>
+
+    <!-- Script Handwriting Tagline -->
+    <p class="banner-tagline text-center">Saberes conectados para a resolução de problemas complexos!</p>
+
+    <!-- Interactive CTAs Group -->
+    <div class="kn-cta-group" role="group" aria-label="Ações principais do evento">
+      <a href="{{ '/inscricoes/' | relative_url }}" class="kn-btn-primary" id="btn-hero-inscricao">
+        <span class="kn-btn-title-main">Inscreva-se Gratuitamente</span>
+        <span class="kn-btn-subtext">Passo a passo SIGEventos</span>
+      </a>
+      <a href="{{ '/submissao/' | relative_url }}" class="kn-btn-secondary" id="btn-hero-submissao">
+        <span class="kn-btn-title-main">Submeta seu Trabalho</span>
+        <span class="kn-btn-subtext">Até 30 de Setembro</span>
+      </a>
+    </div>
+  </div>
 </div>
