@@ -21,7 +21,7 @@ Apoiar o III CONTEC significa conectar diretamente sua organização com estudan
 Sua marca estará em evidência em um evento dinâmico que atrai grande público através de atividades como:
 - Palestras, minicursos e oficinas práticas.
 - Apresentações de trabalhos científicos e visitas técnicas.
-- Desafios tecnológicos e lançamentos de foguetes.
+- Desafios tecnológicos e lançamentos de foguetes de garrafa PET.
 - Concurso de fotografia e a **IV Corrida em Trilha do Centro de Ciências de Balsas**.
 
 ---
