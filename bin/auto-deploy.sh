@@ -36,7 +36,10 @@ REMOTE_HASH=$(git rev-parse "origin/${BRANCH}")
 
 # 3. Verificar se há alterações
 if [ "${LOCAL_HASH}" = "${REMOTE_HASH}" ]; then
-    # Repositório já atualizado - sai silenciosamente sem log excessivo
+    # Se for executado manualmente no terminal (TTY), mostra mensagem informativa
+    if [ -t 1 ]; then
+        echo "✅ Repositório já está atualizado no commit (${LOCAL_HASH:0:7}). Nenhuma alteração pendente."
+    fi
     exit 0
 fi
 
