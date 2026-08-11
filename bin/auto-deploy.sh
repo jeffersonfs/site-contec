@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # ==============================================================================
-# Script de Monitoramento e Auto-Deploy para Produção
+# Script de Monitoramento, Auto-Deploy e Validação de Produção
 # Projeto: III CONTEC MATOPIBA
 # ==============================================================================
 
@@ -31,7 +31,7 @@ for arg in "$@"; do
     esac
 done
 
-# Função de log com saída espelhada no terminal quando executado manualmente
+# Função de log com saída espelhada no terminal
 log() {
     local MSG="[$(date '+%Y-%m-%d %H:%M:%S')] $1"
     echo "$MSG" >> "${LOG_FILE}"
@@ -63,9 +63,9 @@ if [ "${LOCAL_HASH}" = "${REMOTE_HASH}" ] && [ "${FORCE_BUILD}" != "true" ]; the
     if [ -t 1 ]; then
         echo "========================================================"
         echo "✅ O código local já está atualizado com o GitHub (commit ${LOCAL_HASH:0:7})."
-        echo "ℹ️  Nada a ser atualizado."
+        echo "ℹ️  Nenhuma nova alteração detectada."
         echo ""
-        echo "👉 Para forçar a recompilação e o deploy imediato mesmo sem novos commits, rode:"
+        echo "👉 Para forçar a recompilação, validação e rsync do site, rode:"
         echo "   ./bin/auto-deploy.sh --force"
         echo "========================================================"
     fi
@@ -92,66 +92,62 @@ PULL_STATUS=$?
 echo "${PULL_OUTPUT}" >> "${LOG_FILE}"
 
 if [ $PULL_STATUS -ne 0 ]; then
-    log "❌ ERRO ao executar 'git pull':"
+    log "❌ ERRO CRÍTICO ao executar 'git pull':"
     log "${PULL_OUTPUT}"
     exit 1
 fi
-log "✅ Código-fonte atualizado com sucesso!"
+log "✅ Código-fonte atualizado com sucesso para o commit: $(git rev-parse --short HEAD)"
 
-# 5. Executar a compilação / build
-log "🔨 Iniciando compilação do site..."
+# 5. Limpeza preparatória para garantir validação real do build
+log "🧹 Removendo pasta '_site' antiga para validação de compilação..."
+rm -rf _site
 
-BUILD_SUCCESS=false
+# 6. Executar o Build do Jekyll
+log "🔨 Iniciando compilação do site Jekyll..."
 
-# Estratégia A: Docker Compose
 if command -v docker &>/dev/null && [ -f "docker-compose.yml" ]; then
-    log "🐳 Executando build via Docker Compose..."
+    log "🐳 Detectado Docker Compose. Garantindo contêiner ativo e rodando build..."
     if command -v docker-compose &>/dev/null; then
         DOCKER_CMD="docker-compose"
     else
         DOCKER_CMD="docker compose"
     fi
     
-    if [ -t 1 ]; then
-        ${DOCKER_CMD} up -d --build | tee -a "${LOG_FILE}"
-        DOCKER_STATUS=${PIPESTATUS[0]}
-    else
-        ${DOCKER_CMD} up -d --build >>"${LOG_FILE}" 2>&1
-        DOCKER_STATUS=$?
+    ${DOCKER_CMD} up -d >>"${LOG_FILE}" 2>&1
+    
+    log "⏳ Compilando Jekyll dentro do contêiner Docker..."
+    ${DOCKER_CMD} exec -T jekyll bundle exec jekyll build --destination /srv/jekyll/_site 2>&1 | tee -a "${LOG_FILE}"
+    
+    # Se o volume mount não espelhou para o host, copiar do contêiner
+    if [ ! -f "_site/index.html" ]; then
+        CONTAINER_ID=$(${DOCKER_CMD} ps -q jekyll 2>/dev/null)
+        if [ -n "${CONTAINER_ID}" ]; then
+            log "📦 Extraindo arquivos compilados (_site) do contêiner Docker..."
+            docker cp "${CONTAINER_ID}:/tmp/_site" ./_site 2>>"${LOG_FILE}"
+        fi
     fi
-
-    if [ $DOCKER_STATUS -eq 0 ]; then
-        log "✅ Contêineres Docker atualizados e em execução!"
-        BUILD_SUCCESS=true
-    else
-        log "❌ ERRO durante o build do Docker Compose."
-    fi
-# Estratégia B: Bundle / Jekyll local
 elif command -v bundle &>/dev/null; then
     log "💎 Compilando via Jekyll local (bundle exec jekyll build)..."
-    if [ -t 1 ]; then
-        JEKYLL_ENV=production bundle exec jekyll build | tee -a "${LOG_FILE}"
-        JEKYLL_STATUS=${PIPESTATUS[0]}
-    else
-        JEKYLL_ENV=production bundle exec jekyll build >>"${LOG_FILE}" 2>&1
-        JEKYLL_STATUS=$?
-    fi
-
-    if [ $JEKYLL_STATUS -eq 0 ]; then
-        log "✅ Build do Jekyll gerado em _site/!"
-        BUILD_SUCCESS=true
-    else
-        log "❌ ERRO durante a compilação do Jekyll."
-    fi
+    JEKYLL_ENV=production bundle exec jekyll build --destination _site 2>&1 | tee -a "${LOG_FILE}"
 else
-    log "⚠️ AVISO: Nem Docker nem Bundle/Jekyll foram encontrados no servidor."
-    log "Tentando verificar se a pasta _site/ pré-compilada existe..."
-    if [ -d "_site" ]; then
-        BUILD_SUCCESS=true
-    fi
+    log "⚠️ AVISO: Nem Docker nem Bundle/Jekyll foram encontrados no PATH do servidor."
 fi
 
-# 6. Autodetectar pasta de destino Web se não especificada
+# ==============================================================================
+# VALIDAÇÃO RIGOROSA DA CRIAÇÃO DO _SITE
+# ==============================================================================
+if [ ! -d "_site" ] || [ ! -f "_site/index.html" ]; then
+    log "❌ ERRO CRÍTICO DE BUILD: A pasta '_site' ou '_site/index.html' NÃO foi gerada!"
+    log "O build falhou e o rsync foi ABORTADO para proteger a produção."
+    exit 1
+fi
+
+SIZE_SITE=$(du -sh _site 2>/dev/null | cut -f1)
+log "✅ BUILD VALIDADOM COM SUCESSO! A pasta '_site' foi criada/atualizada (Tamanho: ${SIZE_SITE}, index.html OK)."
+
+# ==============================================================================
+# CONFIGURAÇÃO, SINCRONIZAÇÃO E VALIDAÇÃO DO RSYNC
+# ==============================================================================
 if [ -z "${TARGET_WEB_DIR}" ]; then
     if [ -d "/var/www/site-contec" ]; then
         TARGET_WEB_DIR="/var/www/site-contec"
@@ -160,27 +156,39 @@ if [ -z "${TARGET_WEB_DIR}" ]; then
     fi
 fi
 
-# 7. Sincronização rsync para a pasta do Nginx/Apache (se aplicável)
-if [ -n "${TARGET_WEB_DIR}" ] && [ -d "_site" ]; then
-    log "🔄 Sincronizando arquivos de _site/ para ${TARGET_WEB_DIR} via rsync..."
-    if command -v rsync &>/dev/null; then
-        RSYNC_OUT=$(rsync -av --delete _site/ "${TARGET_WEB_DIR}/" 2>&1)
-        RSYNC_STATUS=$?
-        echo "${RSYNC_OUT}" >> "${LOG_FILE}"
-        if [ $RSYNC_STATUS -eq 0 ]; then
-            log "✅ Sincronização web para ${TARGET_WEB_DIR} concluída com sucesso!"
-        else
-            log "⚠️ Falha ao executar rsync para ${TARGET_WEB_DIR}:"
-            log "${RSYNC_OUT}"
-        fi
-    else
-        log "🔄 rsync não encontrado, copiando arquivos via cp -r..."
-        cp -r _site/* "${TARGET_WEB_DIR}/" 2>>"${LOG_FILE}"
-        log "✅ Arquivos copiados para ${TARGET_WEB_DIR}!"
-    fi
+if [ -z "${TARGET_WEB_DIR}" ]; then
+    log "⚠️ AVISO: O site foi compilado com sucesso em '_site/', mas NENHUMA pasta de destino do Nginx/Apache (TARGET_WEB_DIR) foi especificada."
+    log "Para sincronizar automaticamente via rsync com seu webserver, execute:"
+    log "   TARGET_WEB_DIR=\"/var/www/sua-pasta-web\" ./bin/auto-deploy.sh --force"
+    exit 0
 fi
 
-log "🎉 DEPLOY CONCLUÍDO COM SUCESSO! Commit atual: $(git rev-parse --short HEAD)"
-log "========================================================"
+if [ ! -d "${TARGET_WEB_DIR}" ]; then
+    log "❌ ERRO DE DESTINO: A pasta de destino do servidor '${TARGET_WEB_DIR}' não existe!"
+    exit 1
+fi
+
+log "🔄 Sincronizando '_site/' -> '${TARGET_WEB_DIR}' via rsync..."
+if command -v rsync &>/dev/null; then
+    rsync -av --delete _site/ "${TARGET_WEB_DIR}/" 2>&1 | tee -a "${LOG_FILE}"
+    RSYNC_STATUS=${PIPESTATUS[0]}
+else
+    log "🔄 rsync não encontrado, copiando arquivos via cp -r..."
+    cp -r _site/* "${TARGET_WEB_DIR}/" 2>>"${LOG_FILE}"
+    RSYNC_STATUS=$?
+fi
+
+# Validação final do destino
+if [ $RSYNC_STATUS -eq 0 ] && [ -f "${TARGET_WEB_DIR}/index.html" ]; then
+    TARGET_SIZE=$(du -sh "${TARGET_WEB_DIR}" 2>/dev/null | cut -f1)
+    log "========================================================"
+    log "🎉 DEPLOY E SINCRONIZAÇÃO VERIFICADOS COM SUCESSO!"
+    log "📁 Pasta de Produção: ${TARGET_WEB_DIR} (Tamanho: ${TARGET_SIZE})"
+    log "📄 Confirmado: ${TARGET_WEB_DIR}/index.html está atualizado!"
+    log "========================================================"
+else
+    log "❌ ERRO CRÍTICO NA SINCRONIZAÇÃO: Falha no rsync ou '${TARGET_WEB_DIR}/index.html' não encontrado!"
+    exit 1
+fi
 
 exit 0
