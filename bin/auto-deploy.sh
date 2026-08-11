@@ -11,6 +11,7 @@ REPO_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 # Configurações
 BRANCH="${1:-main}"
+TARGET_WEB_DIR="${TARGET_WEB_DIR:-}" # Ex: /var/www/html ou /var/www/site-contec (pode ser passado como variável de ambiente)
 LOCK_FILE="/tmp/site-contec-deploy.lock"
 LOG_FILE="${REPO_DIR}/deploy.log"
 
@@ -65,6 +66,13 @@ elif command -v bundle &>/dev/null; then
     log "✅ Build do Jekyll concluído em _site/!"
 else
     log "⚠️ AVISO: Código atualizado, mas nem Docker nem Bundle foram encontrados no PATH para recriar o site."
+fi
+
+# 6. Sincronização atômica via rsync com a pasta pública do Nginx/Apache
+if [ -n "${TARGET_WEB_DIR}" ] && [ -d "_site" ]; then
+    log "🔄 Sincronizando arquivos compilados (_site/) com ${TARGET_WEB_DIR} via rsync..."
+    rsync -av --delete --chown=www-data:www-data _site/ "${TARGET_WEB_DIR}/" >>"${LOG_FILE}" 2>&1
+    log "✅ Sincronização via rsync para ${TARGET_WEB_DIR} concluída!"
 fi
 
 log "🎉 Deploy concluído com sucesso para o commit: $(git rev-parse --short HEAD)"
