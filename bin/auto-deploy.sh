@@ -10,10 +10,25 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
 
 # Configurações
-BRANCH="${1:-main}"
-TARGET_WEB_DIR="${TARGET_WEB_DIR:-}" # Ex: /var/www/html ou /var/www/site-contec (pode ser passado como variável de ambiente)
+BRANCH="main"
+FORCE_BUILD="${FORCE_BUILD:-false}"
+TARGET_WEB_DIR="${TARGET_WEB_DIR:-}" # Ex: /var/www/html ou /var/www/site-contec
 LOCK_FILE="/tmp/site-contec-deploy.lock"
 LOG_FILE="${REPO_DIR}/deploy.log"
+
+# Processar argumentos da linha de comando
+for arg in "$@"; do
+    case $arg in
+        --force|-f|force)
+            FORCE_BUILD=true
+            ;;
+        *)
+            if [[ ! "$arg" =~ ^-- ]]; then
+                BRANCH="$arg"
+            fi
+            ;;
+    esac
+done
 
 log() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" | tee -a "${LOG_FILE}"
@@ -34,20 +49,28 @@ git fetch origin "${BRANCH}" --quiet 2>>"${LOG_FILE}"
 LOCAL_HASH=$(git rev-parse HEAD)
 REMOTE_HASH=$(git rev-parse "origin/${BRANCH}")
 
-# 3. Verificar se há alterações
-if [ "${LOCAL_HASH}" = "${REMOTE_HASH}" ]; then
-    # Se for executado manualmente no terminal (TTY), mostra mensagem informativa
+# 3. Verificar se há alterações (a menos que --force seja usado)
+if [ "${LOCAL_HASH}" = "${REMOTE_HASH}" ] && [ "${FORCE_BUILD}" != "true" ]; then
+    # Se for executado manualmente no terminal (TTY), mostra mensagem informativa e dica
     if [ -t 1 ]; then
         echo "✅ Repositório já está atualizado no commit (${LOCAL_HASH:0:7}). Nenhuma alteração pendente."
+        echo "💡 Dica: Use './bin/auto-deploy.sh --force' para forçar a reconstrução/deploy do site."
     fi
     exit 0
 fi
 
-log "========================================================"
-log "🚀 NOVA ATUALIZAÇÃO DETECTADA no GitHub!"
-log "Commit Local:  ${LOCAL_HASH:0:7}"
-log "Commit Remoto: ${REMOTE_HASH:0:7}"
-log "========================================================"
+if [ "${FORCE_BUILD}" = "true" ]; then
+    log "========================================================"
+    log "⚡ REBUILD FORÇADO SOLICITADO VIA LINHA DE COMANDO (--force)"
+    log "Commit Atual: ${LOCAL_HASH:0:7}"
+    log "========================================================"
+else
+    log "========================================================"
+    log "🚀 NOVA ATUALIZAÇÃO DETECTADA no GitHub!"
+    log "Commit Local:  ${LOCAL_HASH:0:7}"
+    log "Commit Remoto: ${REMOTE_HASH:0:7}"
+    log "========================================================"
+fi
 
 # 4. Atualizar o código local
 log "📥 Baixando alterações do repositório (git pull origin ${BRANCH})..."
