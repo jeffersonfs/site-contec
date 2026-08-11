@@ -1,0 +1,105 @@
+<!-- Countdown Timer & Slideshow Scripts -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Countdown Logic (Oct 17, 2026 08:00:00)
+    const targetDate = new Date('Oct 17, 2026 08:00:00').getTime();
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const secondsEl = document.getElementById('seconds');
+
+    if (daysEl) {
+        const updateTimer = () => {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            if (diff < 0) {
+                const timerEl = document.querySelector('.countdown-timer');
+                if (timerEl) {
+                    timerEl.innerHTML = '<div style="font-family: var(--font-heading); font-size: 1.25rem; font-weight:700; color: #10b981;">O evento começou!</div>';
+                }
+                return;
+            }
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+            daysEl.innerText = String(d).padStart(2, '0');
+            hoursEl.innerText = String(h).padStart(2, '0');
+            secondsEl.innerText = String(s).padStart(2, '0');
+        };
+        updateTimer();
+        setInterval(updateTimer, 1000);
+    }
+
+    // 2. Highlights Slideshow Logic
+    const slideshowTrack = document.querySelector('.kn-slideshow-track');
+    const slideshowPrevBtn = document.querySelector('.kn-slideshow-btn.prev');
+    const slideshowNextBtn = document.querySelector('.kn-slideshow-btn.next');
+    const slideshowDots = document.querySelectorAll('.kn-slideshow-dot');
+
+    if (slideshowTrack && slideshowPrevBtn && slideshowNextBtn) {
+        const getSlideWidth = () => {
+            const slide = slideshowTrack.querySelector('.kn-slideshow-slide');
+            return slide ? slide.offsetWidth : 300;
+        };
+
+        slideshowPrevBtn.addEventListener('click', () => {
+            slideshowTrack.scrollBy({ left: -getSlideWidth(), behavior: 'smooth' });
+        });
+
+        slideshowNextBtn.addEventListener('click', () => {
+            const currentScroll = slideshowTrack.scrollLeft;
+            const maxScroll = slideshowTrack.scrollWidth - slideshowTrack.clientWidth;
+            
+            // Loop back to start if reaching the end
+            if (currentScroll >= maxScroll - 5) {
+                slideshowTrack.scrollTo({ left: 0, behavior: 'smooth' });
+            } else {
+                slideshowTrack.scrollBy({ left: getSlideWidth(), behavior: 'smooth' });
+            }
+        });
+
+        // Update active dot on scroll
+        slideshowTrack.addEventListener('scroll', () => {
+            const scrollLeft = slideshowTrack.scrollLeft;
+            const slideWidth = slideshowTrack.querySelector('.kn-slideshow-slide')?.offsetWidth || 300;
+            const activeIndex = Math.round(scrollLeft / slideWidth);
+
+            slideshowDots.forEach((dot, idx) => {
+                if (idx === activeIndex) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        });
+
+        // Make dot indicators clickable
+        slideshowDots.forEach((dot, idx) => {
+            dot.addEventListener('click', () => {
+                const slideWidth = slideshowTrack.querySelector('.kn-slideshow-slide')?.offsetWidth || 300;
+                slideshowTrack.scrollTo({ left: idx * slideWidth, behavior: 'smooth' });
+            });
+        });
+
+        // Auto-slide every 6 seconds
+        let autoSlideInterval = setInterval(() => {
+            slideshowNextBtn.click();
+        }, 6000);
+
+        // Reset timer on user interaction
+        const resetTimer = () => {
+            clearInterval(autoSlideInterval);
+            autoSlideInterval = setInterval(() => {
+                slideshowNextBtn.click();
+            }, 6000);
+        };
+
+        slideshowPrevBtn.addEventListener('click', resetTimer);
+        slideshowNextBtn.addEventListener('click', resetTimer);
+        slideshowDots.forEach(dot => dot.addEventListener('click', resetTimer));
+    }
+});
+</script>

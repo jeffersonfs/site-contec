@@ -1,0 +1,77 @@
+<!-- Event News/Features Slideshow (Keynote Style) -->
+<div class="my-12">
+    <div class="flex flex-col items-center md:items-start mb-8 text-center md:text-left">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white">Destaques</h2>
+        <div class="w-16 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mt-2"></div>
+    </div>
+    
+    <div class="kn-slideshow-container">
+        <div class="kn-slideshow-wrapper">
+            <button class="kn-slideshow-btn prev" aria-label="Slide anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            
+            <div class="kn-slideshow-track">
+                <!-- Slide 1: Submissions -->
+                <div class="kn-slideshow-slide">
+                    <img src="{{ 'assets/img/carousel_submissions.png' | relative_url }}" alt="Submissões abertas" class="kn-slideshow-img">
+                    <div class="kn-slideshow-overlay"></div>
+                    <div class="kn-slideshow-caption">
+                        <span class="kn-slideshow-tag">Artigos</span>
+                        <h3 class="kn-slideshow-title">Submissões Abertas</h3>
+                        <p class="kn-slideshow-desc">Envie seu artigo pesquisa para CONTEC.</p>
+                        <a href="{{ '/submissao/' | relative_url }}" class="kn-slideshow-link">Enviar meu trabalho <span>&rarr;</span></a>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Robotics -->
+                <div class="kn-slideshow-slide">
+                    <img src="{{ 'assets/img/carousel_robot.png' | relative_url }}" alt="Desafio de Robótica" class="kn-slideshow-img">
+                    <div class="kn-slideshow-overlay"></div>
+                    <div class="kn-slideshow-caption">
+                        <span class="kn-slideshow-tag accent">Competições</span>
+                        <h3 class="kn-slideshow-title">Desafio de Robótica (DEROB)</h3>
+                        <p class="kn-slideshow-desc">Inscreva sua equipe para projetar e testar protótipos autônomos no III Desafio Regional de Robótica.</p>
+                        <a href="{{ '/desafios/robotica/' | relative_url }}" class="kn-slideshow-link">Ver Regulamento <span>&rarr;</span></a>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Bridges -->
+                <div class="kn-slideshow-slide">
+                    <img src="{{ 'assets/img/carousel_bridges.png' | relative_url }}" alt="Competição de Pontes" class="kn-slideshow-img">
+                    <div class="kn-slideshow-overlay"></div>
+                    <div class="kn-slideshow-caption">
+                        <span class="kn-slideshow-tag accent">Competições</span>
+                        <h3 class="kn-slideshow-title">Competição de Pontes</h3>
+                        <p class="kn-slideshow-desc">Monte sua equipe e construa a ponte treliçada de palitos mais resistente do congresso.</p>
+                        <a href="{{ '/desafios/pontes/' | relative_url }}" class="kn-slideshow-link">Ver Regulamento <span>&rarr;</span></a>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Schedule -->
+                <div class="kn-slideshow-slide">
+                    <img src="{{ 'assets/img/carousel_keynotes.png' | relative_url }}" alt="Programação Científica" class="kn-slideshow-img">
+                    <div class="kn-slideshow-overlay"></div>
+                    <div class="kn-slideshow-caption">
+                        <span class="kn-slideshow-tag info">Agenda</span>
+                        <h3 class="kn-slideshow-title">Programação Científica</h3>
+                        <p class="kn-slideshow-desc">Uma trilha de 7 dias com palestras de pesquisadores renomados, minicursos práticos e muito networking.</p>
+                        <a href="{{ '/programacao/' | relative_url }}" class="kn-slideshow-link">Acessar Cronograma <span>&rarr;</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="kn-slideshow-btn next" aria-label="Próximo slide">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Indicator Dots -->
+        <div class="kn-slideshow-dots">
+            <span class="kn-slideshow-dot active" data-index="0"></span>
+            <span class="kn-slideshow-dot" data-index="1"></span>
+            <span class="kn-slideshow-dot" data-index="2"></span>
+            <span class="kn-slideshow-dot" data-index="3"></span>
+        </div>
+    </div>
+</div>

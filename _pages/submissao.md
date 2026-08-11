@@ -205,13 +205,10 @@ nav_order: 4
         <!-- Templates Card -->
         <div class="kn-card" style="padding: 1.5rem;">
             <h4 class="kn-card-title"><i class="fa-solid fa-file-lines" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Templates de Trabalho</h4>
-            <p class="kn-card-desc">Baixe os modelos oficiais de formatação:</p>
+            <p class="kn-card-desc">Baixe o modelo oficial de formatação:</p>
             <div style="display:flex; flex-direction:column; gap:0.75rem;">
-                <a href="#" class="kn-btn-secondary">
-                    <i class="fa-solid fa-file-zipper" style="margin-right: 0.5rem;"></i>Template LaTeX (ZIP)
-                </a>
-                <a href="#" class="kn-btn-secondary">
-                    <i class="fa-solid fa-file-word" style="margin-right: 0.5rem;"></i>Template Word (DOCX)
+                <a href="{{ '/assets/docs/Modelo%20Artigo%20-%20III%20CONTEC%20MATOPIBA.docx' | relative_url }}" download class="kn-btn-secondary">
+                    <i class="fa-solid fa-file-word" style="margin-right: 0.5rem;"></i>Modelo de Artigo (DOCX)
                 </a>
             </div>
         </div>
