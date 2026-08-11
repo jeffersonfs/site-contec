@@ -50,12 +50,12 @@ children:
 
         <!-- Fotografia -->
         <div style="padding: 1.5rem; border-radius: 16px; border: 1px solid var(--global-divider-color); background-color: var(--global-card-bg);">
-            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-camera" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>III Concurso de Fotografia</h4>
+            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-camera" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>IV Concurso de Fotografia Criativa e Arte Digital</h4>
             <p style="font-size: 0.9rem; color: var(--global-text-color); line-height: 1.5; margin-bottom: 1.25rem;">
-                Concurso cultural sob o tema "Minha contribuição para resolução de problemas complexos".
+                Concurso cultural nas modalidades Fotografia Digital e Vídeo Curto sob o tema <em>"Saberes conectados: para a resolução de problemas complexos"</em> (Edital nº 04/2026).
             </p>
             <a href="{{ '/desafios/fotografia/' | relative_url }}" class="kn-btn-primary" style="display: inline-block; padding: 0.5rem 1rem; text-decoration: none; border-radius: 6px; font-size: 0.85rem; font-weight: bold;">
-                <i class="fa-solid fa-circle-info" style="margin-right: 0.25rem;"></i>Ver Detalhes &rarr;
+                <i class="fa-solid fa-circle-info" style="margin-right: 0.25rem;"></i>Ver Detalhes e Edital &rarr;
             </a>
         </div>
     </div>

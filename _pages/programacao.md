@@ -264,9 +264,9 @@ nav_order: 5
 
 <!-- Atividade Transversal -->
 <div style="margin: 2rem auto; max-width: 800px; background-color: var(--global-card-bg); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--global-divider-color);">
-    <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-camera" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Atividade Transversal: Concurso de Fotografia</h3>
+    <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-camera" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Atividade Transversal: Concurso de Fotografia Criativa e Arte Digital</h3>
     <p style="font-size: 0.85rem; color: var(--global-muted-color); line-height: 1.5; margin: 0 0 1rem 0;">
-        Com o tema <strong>"Minha contribuição para a resolução de problemas complexos"</strong>, o III Concurso de Fotografia ocorrerá de forma contínua durante todo o congresso acadêmico. As fotos finalistas estarão expostas no corredor central do campus para visualização, votação dos participantes e avaliação técnica.
+        Com o tema <strong>"Saberes conectados: para a resolução de problemas complexos"</strong> (Edital nº 04/2026), o IV Concurso de Fotografia Criativa e Arte Digital ocorrerá nas modalidades de Fotografia Digital e Vídeo Curto. As obras selecionadas serão publicadas no Instagram oficial e expostas durante o evento para votação do público e avaliação da banca técnica.
     </p>
 </div>
 
