@@ -6,6 +6,11 @@ permalink: /desafios/pontes/
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
+<!-- Section Banner -->
+<div class="kn-page-banner">
+    <img src="{{ 'assets/img/banners/bannersite4.png' | relative_url }}" alt="Competição de Pontes - III CONTEC MATOPIBA" class="kn-page-banner-img">
+</div>
+
 <div class="max-w-4xl mx-auto text-center sm:text-left my-6">
     <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
         A <strong>III Competição de Pontes de Palitos de Picolé</strong> do CONTEC MATOPIBA desafia equipes acadêmicas a projetarem e construírem pontes estruturais em miniatura, utilizando apenas palitos de picolé e cola. O objetivo é aplicar conceitos práticos de resistência dos materiais e análise estrutural.
@@ -34,6 +39,7 @@ permalink: /desafios/pontes/
             </ul>
         </div>
     </div>
+
 </div>
 
 <div class="my-8 text-center sm:text-left">
@@ -50,4 +56,3 @@ permalink: /desafios/pontes/
         </a>
     </div>
 </div>
-

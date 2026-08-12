@@ -19,6 +19,11 @@ nav_order: 4
   <h1 class="post-title"><i class="fa-solid fa-file-pdf" style="color: var(--global-theme-color); margin-right: 0.5rem; display: none;"></i>Submissões de Trabalhos Científicos</h1>
 </header>
 
+<!-- Section Banner -->
+<div class="kn-page-banner">
+    <img src="{{ 'assets/img/banners/bannersite2.png' | relative_url }}" alt="Submissões Abertas - III CONTEC MATOPIBA" class="kn-page-banner-img">
+</div>
+
 <div class="max-w-4xl mx-auto text-center sm:text-left my-6">
     <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
         Chamada oficial para submissão de trabalhos científicos do <strong>III CONTEC MATOPIBA</strong> (Edital nº 02/2026). Convidamos estudantes, pesquisadores e profissionais a submeterem artigos científicos originais.

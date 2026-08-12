@@ -6,6 +6,11 @@ permalink: /desafios/robotica/
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
+<!-- Section Banner -->
+<div class="kn-page-banner">
+    <img src="{{ 'assets/img/banners/BannerSite3.png' | relative_url }}" alt="Desafio de Robótica - DEROB" class="kn-page-banner-img">
+</div>
+
 <div class="max-w-4xl mx-auto text-center sm:text-left my-6">
     <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
         O <strong>Desafio de Robótica</strong> do CONTEC MATOPIBA estimula a aplicação prática de engenharia, programação e eletrônica. O objetivo é desenvolver soluções robóticas inovadoras voltadas para os gargalos reais da nossa sociedade e da indústria regional.
@@ -34,6 +39,7 @@ permalink: /desafios/robotica/
             </ul>
         </div>
     </div>
+
 </div>
 
 <div class="my-8 text-center sm:text-left">
