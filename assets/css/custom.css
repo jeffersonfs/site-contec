@@ -1585,3 +1585,30 @@ h3:not(.timeline-title):not(.kn-quick-title):not(.kn-slideshow-title):not(.count
   margin-top: 2.25rem !important;
   margin-bottom: 1.25rem !important;
 }
+
+/* --- SECTION PAGE HEADER BANNER SYSTEM --- */
+.kn-page-banner {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 2.25rem auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -5px rgba(0, 77, 64, 0.12);
+  border: 1px solid var(--global-divider-color, #e2e8f0);
+  background-color: var(--global-card-bg, #ffffff);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.kn-page-banner:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 35px -5px rgba(0, 77, 64, 0.18);
+}
+
+.kn-page-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
