@@ -28,6 +28,23 @@ nav_order: 4
     <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
         Chamada oficial para submissão de trabalhos científicos do <strong>III CONTEC MATOPIBA</strong> (Edital nº 02/2026). Convidamos estudantes, pesquisadores e profissionais a submeterem artigos científicos originais.
     </p>
+
+    <!-- Callout Plataforma SIGEventos -->
+    <div style="margin-top: 1.5rem; padding: 1.25rem 1.5rem; border-radius: 14px; border: 1.5px solid var(--global-theme-color); background: rgba(204, 160, 37, 0.08); display: flex; flex-direction: column; gap: 0.75rem;">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <i class="fa-solid fa-circle-info" style="color: var(--global-theme-color); font-size: 1.25rem;"></i>
+            <span style="font-size: 1.05rem; font-weight: 700; color: var(--global-text-color);">Onde submeter seu trabalho:</span>
+        </div>
+        <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--global-text-color);">
+            A submissão de artigos deve ser feita exclusivamente pelo site oficial do <strong>SIGEventos UFMA</strong>: <a href="https://sigeventos.ufma.br/" target="_blank" rel="noopener noreferrer" style="color: var(--global-theme-color); font-weight: 700; text-decoration: underline;">https://sigeventos.ufma.br/</a> até o dia <strong>18 de setembro de 2026</strong>.
+        </p>
+        <div>
+            <a href="https://sigeventos.ufma.br/" target="_blank" rel="noopener noreferrer" class="kn-btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; padding: 0.6rem 1.25rem; font-size: 0.9rem;">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                <span>Acessar SIGEventos UFMA</span>
+            </a>
+        </div>
+    </div>
 </div>
 
 <hr class="border-slate-100 dark:border-slate-800 my-8">
@@ -136,7 +153,7 @@ nav_order: 4
         <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
-                <span class="timeline-date">28 de Agosto de 2026</span>
+                <span class="timeline-date">18 de Setembro de 2026</span>
                 <h3 class="timeline-title">Prazo de Submissão</h3>
                 <p class="timeline-desc">Prazo final para envio dos artigos na plataforma oficial.</p>
             </div>
@@ -218,4 +235,10 @@ nav_order: 4
             </div>
         </div>
     </div>
+</div>
+
+<div style="display:flex; justify-content:center; margin: 3rem 0 1.5rem 0;">
+    <a href="https://sigeventos.ufma.br/" target="_blank" rel="noopener noreferrer" class="kn-btn-primary" style="text-decoration: none; font-size: 1.05rem; padding: 0.85rem 1.75rem;">
+        <i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 0.5rem;"></i>Submeter Artigo no SIGEventos UFMA
+    </a>
 </div>
