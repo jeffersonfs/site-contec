@@ -44,8 +44,8 @@ permalink: /desafios/fotografia/
             <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-calendar-days" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Cronograma Oficial</h4>
             <ul style="font-size: 0.9rem; color: var(--global-text-color); line-height: 1.7; margin: 0 0 0 1.25rem; padding: 0;">
                 <li><strong>Lançamento do Edital:</strong> 06 de julho de 2026</li>
-                <li><strong>Prazo Final de Inscrição:</strong> 01 de outubro de 2026</li>
-                <li><strong>Divulgação das Artes no Instagram:</strong> 10 de outubro de 2026</li>
+                <li><strong>Prazo Final de Inscrição:</strong> 16 de outubro de 2026</li>
+                <li><strong>Divulgação das Artes no Instagram:</strong> 19 de outubro de 2026</li>
                 <li><strong>Exposição e Votação durante o evento:</strong> 19 a 23 de outubro de 2026</li>
                 <li><strong>Divulgação do Resultado e Premiação:</strong> 23 de outubro de 2026</li>
             </ul>
