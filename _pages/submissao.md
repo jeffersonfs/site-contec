@@ -162,7 +162,7 @@ nav_order: 4
         <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
-                <span class="timeline-date">21 de Setembro de 2026</span>
+                <span class="timeline-date">07 de Outubro de 2026</span>
                 <h3 class="timeline-title">Divulgação dos Resultados</h3>
                 <p class="timeline-desc">Lista dos trabalhos aceitos para apresentação.</p>
             </div>
@@ -171,7 +171,7 @@ nav_order: 4
         <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
-                <span class="timeline-date">30 de Setembro de 2026</span>
+                <span class="timeline-date">09 de Outubro de 2026</span>
                 <h3 class="timeline-title">Envio da Versão Final</h3>
                 <p class="timeline-desc">Prazo final para os autores enviarem os arquivos corrigidos.</p>
             </div>

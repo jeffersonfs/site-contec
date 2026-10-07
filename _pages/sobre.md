@@ -15,7 +15,7 @@ Antes de sua criação, as atividades científicas do campus ocorriam de forma f
 ### <i class="fa-solid fa-clock-rotate-left" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Histórico do Evento
 - <strong><a href="https://www.contecmatopiba.com/" target="_blank" rel="noopener noreferrer" title="I CONTEC (2024)">I CONTEC (2024)</a></strong>: Realizado de 25 a 29 de novembro de 2024, com o tema _“Inovação Tecnológica e Sustentabilidade: Caminhos para o Futuro”_. Reuniu centenas de participantes com palestras, minicursos, visitas técnicas e debates sobre fontes de energias renováveis e desenvolvimento regional.
 - <strong><a href="https://www.even3.com.br/e/ii-contec-matopiba-607398" target="_blank" rel="noopener noreferrer" title="II CONTEC (2025)">II CONTEC (2025)</a></strong>: Realizado de 19 a 23 de outubro de 2025, sob o tema _“Maranhão Inteligente para o Desenvolvimento Sustentável”_, introduzindo desafios de robótica e a III Corrida em Trilha do CCBL.
-- **III CONTEC (2026)**: A ser realizado de 17 a 23 de outubro de 2026, com o tema _“Saberes conectados: para resolução de problemas complexos”_.
+- **III CONTEC (2026)**: A ser realizado de 18 a 23 de outubro de 2026, com o tema _“Saberes conectados: para resolução de problemas complexos”_.
 
 ### <i class="fa-solid fa-compass" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Eixos e Alinhamento Estratégico
 

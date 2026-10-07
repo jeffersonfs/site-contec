@@ -31,7 +31,7 @@ nav_order: 5
 
 <div class="max-w-4xl mx-auto text-center sm:text-left my-6">
     <p class="text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
-        Bem-vindo à programação detalhada e oficial do <strong>III CONTEC MATOPIBA</strong> (17 a 23 de Outubro de 2026). Explore os <strong>banners temáticos</strong> com a chamada de cada minicurso e conferência, conheça os <strong>apresentadores em destaque</strong> e navegue pelo cronograma dia a dia:
+        Bem-vindo à programação detalhada e oficial do <strong>III CONTEC MATOPIBA</strong> (18 a 23 de Outubro de 2026). Explore os <strong>banners temáticos</strong> com a chamada de cada minicurso e conferência, conheça os <strong>apresentadores em destaque</strong> e navegue pelo cronograma dia a dia:
     </p>
 </div>
 
@@ -414,38 +414,12 @@ nav_order: 5
 
     <!-- Day Selector Tabs (Swipeable on mobile) -->
     <div class="kn-schedule-tabs-container">
-        <button class="kn-tab-btn" data-day="day1">Sáb, 17/10</button>
         <button class="kn-tab-btn" data-day="day2">Dom, 18/10</button>
         <button class="kn-tab-btn active" data-day="day3">Seg, 19/10</button>
         <button class="kn-tab-btn" data-day="day4">Ter, 20/10</button>
         <button class="kn-tab-btn" data-day="day5">Qua, 21/10</button>
         <button class="kn-tab-btn" data-day="day6">Qui, 22/10</button>
         <button class="kn-tab-btn" data-day="day7">Sex, 23/10</button>
-    </div>
-
-    <!-- DAY 1: Saturday 17/10 -->
-    <div class="schedule-day" id="day1">
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th style="width: 160px;">Hora</th>
-                        <th>Atividade / Sessão</th>
-                        <th>Local</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td data-label="Hora"><strong>08:00 - 12:00</strong></td>
-                        <td data-label="Atividade">
-                            <strong>Visita Técnica</strong> a polos estratégicos agrícolas da região de Balsas (Gislane)
-                            <span class="kn-status-badge kn-status-canceled">CANCELADA</span>
-                        </td>
-                        <td data-label="Local">Polos de Produção Local</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
     </div>
 
     <!-- DAY 2: Sunday 18/10 -->
