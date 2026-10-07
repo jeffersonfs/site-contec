@@ -61,9 +61,9 @@ nav_order: 3
         <div class="kn-step-card">
             <div class="kn-step-num">4</div>
             <div class="kn-step-content">
-                <h4 class="kn-step-title"><i class="fa-solid fa-clipboard-list" style="color: var(--global-theme-color); margin-right: 0.5rem; font-size: 0.95rem;"></i>Inscrever-se em Atividades</h4>
+                <h4 class="kn-step-title"><i class="fa-solid fa-clipboard-list" style="color: var(--global-theme-color); margin-right: 0.5rem; font-size: 0.95rem;"></i>Inscrever-se nos Minicursos e Atividades</h4>
                 <p class="kn-step-desc">
-                    Dentro da área do evento, você poderá escolher minicursos específicos, oficinas e competições técnicas para se inscrever. Lembre-se de que as vagas para estas atividades são limitadas.
+                    Dentro da área do III CONTEC no sistema, selecione os minicursos, oficinas práticas e competições que deseja participar (incluindo o minicurso presencial no SENAI e nos laboratórios da UFMA). As vagas são limitadas pela capacidade de cada espaço.
                 </p>
             </div>
         </div>
@@ -77,6 +77,7 @@ nav_order: 3
 <div style="margin: 2rem auto; max-width: 800px; padding: 1.5rem; border-radius: 16px; border: 1px solid var(--global-divider-color); background-color: var(--global-card-bg);">
     <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--global-text-color); margin: 0 0 0.5rem 0;"><i class="fa-solid fa-circle-info" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Observações Importantes</h3>
     <ul style="padding-left: 1.25rem; line-height: 1.6; font-size: 0.9rem; color: var(--global-text-color); margin: 0;">
+        <li style="margin-bottom: 0.5rem;"><strong>Inscrições em Minicursos</strong>: Todas as vagas para minicursos (inclusive o minicurso presencial na Unidade SENAI Balsas) são preenchidas exclusivamente pelo SIGEventos. Não há inscrição presencial ou por formulários externos.</li>
         <li style="margin-bottom: 0.5rem;"><strong>Autores de Trabalhos</strong>: Autores que pretendem submeter resumos ou artigos devem obrigatoriamente realizar a inscrição no SIGEventos para homologação dos aceites e publicação nos Anais do evento.</li>
         <li><strong>Credenciamento Presencial</strong>: ocorrerá no dia <strong>19 de outubro de 2026, a partir das 14h30</strong>, no Bloco de Pedagógico do CCBL UFMA.</li>
     </ul>

@@ -65,6 +65,10 @@ nav_order: 5
         <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2 max-w-3xl">
             Atividades práticas e imersivas com vagas limitadas para desenvolver competências essenciais nas áreas de exatas, geoprocessamento, comunicação científica, modelagem inteligente e eficiência energética.
         </p>
+        <div style="background: rgba(var(--global-theme-color-rgb), 0.08); border-left: 4px solid var(--global-theme-color); padding: 0.85rem 1.25rem; border-radius: 8px; margin-top: 1rem; font-size: 0.9rem; color: var(--global-text-color); max-width: 800px;">
+            <i class="fa-solid fa-circle-info" style="color: var(--global-theme-color); margin-right: 0.4rem;"></i>
+            <strong>Inscrições:</strong> Todas as inscrições para os minicursos (incluindo o minicurso presencial no SENAI e nos laboratórios da UFMA) são <strong>100% gratuitas</strong> e realizadas exclusivamente pelo <a href="https://sigeventos.ufma.br" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: var(--global-theme-color); text-decoration: underline;">SIGEventos UFMA</a>. Vagas limitadas!
+        </div>
     </div>
 
     <div class="kn-banners-container">
@@ -131,7 +135,7 @@ nav_order: 5
                 </div>
                 <div class="kn-banner-footer">
                     <a href="{{ '/inscricoes/' | relative_url }}" class="kn-btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.88rem; border-radius: 8px;">
-                        <i class="fa-solid fa-user-plus" style="margin-right: 0.4rem;"></i> Inscrever-se no Lab Info II &rarr;
+                        <i class="fa-solid fa-user-plus" style="margin-right: 0.4rem;"></i> Inscrever-se via SIGEventos &rarr;
                     </a>
                 </div>
             </div>
@@ -165,7 +169,7 @@ nav_order: 5
                 </div>
                 <div class="kn-banner-footer">
                     <a href="{{ '/inscricoes/' | relative_url }}" class="kn-btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.88rem; border-radius: 8px;">
-                        <i class="fa-solid fa-user-plus" style="margin-right: 0.4rem;"></i> Inscrever-se no Lab Info &rarr;
+                        <i class="fa-solid fa-user-plus" style="margin-right: 0.4rem;"></i> Inscrever-se via SIGEventos &rarr;
                     </a>
                 </div>
             </div>
@@ -234,7 +238,7 @@ nav_order: 5
                 </div>
                 <div class="kn-banner-footer">
                     <a href="{{ '/inscricoes/' | relative_url }}" class="kn-btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.88rem; border-radius: 8px; background: linear-gradient(135deg, #005da4, #0284c7);">
-                        <i class="fa-solid fa-user-plus" style="margin-right: 0.4rem;"></i> Inscrever-se no Minicurso SENAI &rarr;
+                        <i class="fa-solid fa-user-plus" style="margin-right: 0.4rem;"></i> Inscrever-se via SIGEventos &rarr;
                     </a>
                 </div>
             </div>
