@@ -1922,27 +1922,6 @@ h3:not(.timeline-title):not(.kn-quick-title):not(.kn-slideshow-title):not(.count
 }
 
 /* Status badge (e.g., Cancelada) */
-.kn-status-badge {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  padding: 0.15rem 0.5rem;
-  border-radius: 4px;
-  margin-left: 0.5rem;
-}
-
-.kn-status-canceled {
-  background-color: #fee2e2;
-  color: #b91c1c;
-  border: 1px solid #fca5a5;
-}
-
-[data-theme="dark"] .kn-status-canceled {
-  background-color: rgba(185, 28, 28, 0.25);
-  color: #fca5a5;
-  border-color: rgba(239, 68, 68, 0.4);
-}
 
 /* ==========================================================================
    HOMEPAGE FEATURED SPEAKERS & TIMELINE SPACING (FIX OVERLAP)
