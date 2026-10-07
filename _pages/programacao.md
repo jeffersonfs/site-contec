@@ -56,19 +56,16 @@ nav_order: 5
 <!-- ========================================================================= -->
 <section id="minicursos" class="my-12">
     <div class="flex flex-col items-center md:items-start mb-6 text-center md:text-left">
-        <div class="flex items-center gap-2">
+        <div class="flex flex-wrap items-center gap-2">
             <span class="kn-tag-pill tag-minicurso"><i class="fa-solid fa-graduation-cap"></i> Capacitação Técnica</span>
             <span class="kn-tag-pill tag-time"><i class="fa-solid fa-certificate"></i> Certificação Oficial</span>
+            <span class="kn-tag-pill tag-senai"><i class="fa-solid fa-arrow-up-right-from-square"></i> Inscrições via SIGEventos</span>
         </div>
         <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white mt-2">Minicursos Confirmados</h2>
         <div class="w-16 h-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full mt-2"></div>
         <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2 max-w-3xl">
-            Atividades práticas e imersivas com vagas limitadas para desenvolver competências essenciais nas áreas de exatas, geoprocessamento, comunicação científica, modelagem inteligente e eficiência energética.
+            Atividades práticas e imersivas com vagas limitadas para desenvolver competências essenciais nas áreas de exatas, geoprocessamento, comunicação científica, modelagem inteligente e eficiência energética. Todas as inscrições são gratuitas pelo SIGEventos UFMA.
         </p>
-        <div style="background: rgba(var(--global-theme-color-rgb), 0.08); border-left: 4px solid var(--global-theme-color); padding: 0.85rem 1.25rem; border-radius: 8px; margin-top: 1rem; font-size: 0.9rem; color: var(--global-text-color); max-width: 800px;">
-            <i class="fa-solid fa-circle-info" style="color: var(--global-theme-color); margin-right: 0.4rem;"></i>
-            <strong>Inscrições:</strong> Todas as inscrições para os minicursos (incluindo o minicurso presencial no SENAI e nos laboratórios da UFMA) são <strong>100% gratuitas</strong> e realizadas exclusivamente pelo <a href="https://sigeventos.ufma.br" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: var(--global-theme-color); text-decoration: underline;">SIGEventos UFMA</a>. Vagas limitadas!
-        </div>
     </div>
 
     <div class="kn-banners-container">
