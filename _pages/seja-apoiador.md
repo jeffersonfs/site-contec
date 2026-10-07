@@ -2,7 +2,7 @@
 layout: page
 title: Apoio
 permalink: /seja-apoiador/
-nav: true
+nav: false
 nav_order: 6
 ---
 
@@ -23,6 +23,16 @@ Sua marca estará em evidência em um evento dinâmico que atrai grande público
 - Apresentações de trabalhos científicos e visitas técnicas.
 - Desafios tecnológicos e lançamentos de foguetes de garrafa PET.
 - Concurso de fotografia e a **IV Corrida em Trilha do Centro de Ciências de Balsas**.
+
+### <i class="fa-solid fa-handshake" style="color: var(--global-theme-color); margin-right: 0.5rem;"></i>Apoiadores Confirmados
+
+Agradecemos às empresas que acreditam na inovação, na educação e no desenvolvimento regional do MATOPIBA:
+
+<div style="display: flex; justify-content: flex-start; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin: 1.5rem 0 2.5rem 0;">
+    <div style="background-color: #ffffff; padding: 1.25rem 2.25rem; border-radius: 16px; border: 1px solid var(--global-divider-color); box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+        <img src="{{ '/assets/img/logo_casa_sertaneja.jpg' | relative_url }}" alt="Casa Sertaneja - Apoio Oficial" style="height: 70px; width: auto; max-width: 280px; display: block; object-fit: contain; border-radius: 6px;">
+    </div>
+</div>
 
 ---
 

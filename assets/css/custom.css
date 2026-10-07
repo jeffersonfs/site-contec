@@ -1896,3 +1896,429 @@ h3:not(.timeline-title):not(.kn-quick-title):not(.kn-slideshow-title):not(.count
   display: block;
   object-fit: cover;
 }
+
+/* ==========================================================================
+   PROGRAMAÇÃO, MINICURSOS E PALESTRANTES (BANNERS & DESTAQUES)
+   ========================================================================== */
+
+/* Quick Filter / Anchor Nav */
+.kn-prog-nav-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin: 1.5rem 0 2.5rem 0;
+}
+
+.kn-prog-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  color: var(--global-text-color);
+  background: var(--global-card-bg);
+  border: 1px solid var(--global-divider-color);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.kn-prog-pill:hover,
+.kn-prog-pill:focus {
+  background: var(--global-theme-gradient);
+  color: #ffffff !important;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(var(--global-theme-color-rgb), 0.25);
+}
+
+/* Banner Showcase Grid */
+.kn-banners-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0 3.5rem 0;
+}
+
+/* Featured Banner Card (Hero Callout for each Minicurso and Keynote) */
+.kn-feature-banner {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--global-card-bg);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.kn-feature-banner:hover {
+  transform: translateY(-4px);
+  border-color: rgba(var(--global-theme-color-rgb), 0.4);
+  box-shadow: 0 16px 36px -8px rgba(var(--global-theme-color-rgb), 0.18);
+}
+
+/* Distinct Header Gradient Ribbon */
+.kn-feature-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--global-theme-gradient);
+  z-index: 2;
+}
+
+.kn-feature-banner.accent-gold::before {
+  background: linear-gradient(90deg, #cca025, #eab308, #cca025);
+}
+
+.kn-feature-banner.accent-senai::before {
+  background: linear-gradient(90deg, #005da4, #0284c7, #005da4);
+}
+
+@media (min-width: 820px) {
+  .kn-feature-banner {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+/* Left Presenter Side */
+.kn-banner-presenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(180deg, rgba(var(--global-theme-color-rgb), 0.05) 0%, rgba(var(--global-theme-color-rgb), 0.02) 100%);
+  border-bottom: 1px solid var(--global-divider-color);
+  text-align: center;
+  position: relative;
+}
+
+@media (min-width: 820px) {
+  .kn-banner-presenter {
+    border-bottom: none;
+    border-right: 1px solid var(--global-divider-color);
+  }
+}
+
+/* Presenter Photo with Glowing Border */
+.kn-presenter-photo-wrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--global-theme-color), #cca025);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.kn-feature-banner.accent-gold .kn-presenter-photo-wrapper {
+  background: linear-gradient(135deg, #cca025, #f59e0b);
+}
+
+.kn-feature-banner.accent-senai .kn-presenter-photo-wrapper {
+  background: linear-gradient(135deg, #005da4, #38bdf8);
+}
+
+.kn-presenter-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  background-color: #ffffff;
+  display: block;
+}
+
+.kn-presenter-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--global-text-color);
+  margin: 0.25rem 0 0.25rem 0;
+  line-height: 1.3;
+}
+
+.kn-presenter-role {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--global-muted-color);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+}
+
+.kn-presenter-inst {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  background: rgba(var(--global-theme-color-rgb), 0.1);
+  color: var(--global-theme-color);
+  margin-top: 0.25rem;
+}
+
+/* Right Content Side */
+.kn-banner-content {
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+/* Banner Meta Header */
+.kn-banner-meta-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.kn-tag-pill {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.kn-tag-pill.tag-minicurso {
+  background: rgba(16, 185, 129, 0.15);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+[data-theme="dark"] .kn-tag-pill.tag-minicurso {
+  background: rgba(16, 185, 129, 0.25);
+  color: #34d399;
+}
+
+.kn-tag-pill.tag-palestra {
+  background: rgba(204, 160, 37, 0.15);
+  color: #b45309;
+  border: 1px solid rgba(204, 160, 37, 0.3);
+}
+
+[data-theme="dark"] .kn-tag-pill.tag-palestra {
+  background: rgba(204, 160, 37, 0.25);
+  color: #fbbf24;
+}
+
+.kn-tag-pill.tag-senai {
+  background: rgba(0, 93, 164, 0.15);
+  color: #0369a1;
+  border: 1px solid rgba(0, 93, 164, 0.3);
+}
+
+[data-theme="dark"] .kn-tag-pill.tag-senai {
+  background: rgba(0, 93, 164, 0.25);
+  color: #38bdf8;
+}
+
+.kn-tag-pill.tag-time {
+  background: var(--global-divider-color);
+  color: var(--global-text-color);
+}
+
+.kn-banner-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--global-text-color);
+  margin: 0;
+}
+
+.kn-banner-description {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--global-text-color);
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Details Box (Time, Location, Load) */
+.kn-banner-info-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  background: rgba(var(--global-theme-color-rgb), 0.03);
+  border: 1px solid rgba(var(--global-theme-color-rgb), 0.08);
+  border-radius: 12px;
+}
+
+.kn-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--global-text-color);
+}
+
+.kn-info-item i {
+  color: var(--global-theme-color);
+  font-size: 0.95rem;
+}
+
+/* Footer Action Buttons */
+.kn-banner-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* Schedule mini speaker avatar chip */
+.kn-schedule-speaker-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  padding: 0.25rem 0.65rem 0.25rem 0.35rem;
+  background: rgba(var(--global-theme-color-rgb), 0.06);
+  border: 1px solid rgba(var(--global-theme-color-rgb), 0.12);
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--global-text-color);
+}
+
+.kn-schedule-speaker-chip img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Status badge (e.g., Cancelada) */
+.kn-status-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+.kn-status-canceled {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+}
+
+[data-theme="dark"] .kn-status-canceled {
+  background-color: rgba(185, 28, 28, 0.25);
+  color: #fca5a5;
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+/* ==========================================================================
+   HOMEPAGE FEATURED SPEAKERS & TIMELINE SPACING (FIX OVERLAP)
+   ========================================================================== */
+
+.kn-speakers-section {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  clear: both !important;
+  margin-top: 3.5rem !important;
+  margin-bottom: 3.5rem !important;
+  overflow: visible !important;
+}
+
+.kn-speakers-grid {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  margin: 2rem 0;
+  clear: both;
+}
+
+@media (min-width: 600px) {
+  .kn-speakers-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .kn-speakers-grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+.kn-speaker-card {
+  background: var(--global-card-bg);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 18px;
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  min-height: 380px;
+}
+
+.kn-speaker-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--global-theme-color);
+  box-shadow: 0 12px 24px -6px rgba(var(--global-theme-color-rgb), 0.15);
+}
+
+.kn-speaker-avatar-wrapper {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--global-theme-color), #cca025);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.kn-speaker-card.accent-gold .kn-speaker-avatar-wrapper {
+  background: linear-gradient(135deg, #cca025, #f59e0b);
+}
+
+.kn-speaker-card.accent-senai .kn-speaker-avatar-wrapper {
+  background: linear-gradient(135deg, #005da4, #38bdf8);
+}
+
+.kn-speaker-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #ffffff;
+  display: block;
+}
+
+/* Explicit isolation and clearing for Timeline Section */
+.kn-timeline-section {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  clear: both !important;
+  margin-top: 4rem !important;
+  margin-bottom: 4rem !important;
+  overflow: visible !important;
+}

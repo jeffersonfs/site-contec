@@ -38,6 +38,7 @@ social: false
 
 {% include contec-quick-nav.html %}
 {% include contec-highlights.html %}
+{% include contec-speakers.html %}
 {% include contec-timeline.html %}
 {% include contec-realizacao.html %}
 {% include contec-scripts.html %}
