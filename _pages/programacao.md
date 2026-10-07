@@ -371,7 +371,7 @@ nav_order: 5
         <article class="kn-feature-banner accent-senai">
             <div class="kn-banner-presenter">
                 <div class="kn-presenter-photo-wrapper">
-                    <img src="{{ 'assets/img/palestrantes/rayone_oliveira.png' | relative_url }}" alt="Me. Rayone Wesly Santos de Oliveira" class="kn-presenter-photo">
+                    <img src="{{ 'assets/img/palestrantes/rayone_oliveira.jpeg' | relative_url }}" alt="Me. Rayone Wesly Santos de Oliveira" class="kn-presenter-photo">
                 </div>
                 <h3 class="kn-presenter-name">Me. Rayone Wesly Santos de Oliveira</h3>
                 <p class="kn-presenter-role">Mestre em Oceanografia • Doutorando em Biotecnologia</p>
@@ -711,7 +711,7 @@ nav_order: 5
                         <td data-label="Atividade">
                             <strong style="color: #005da4;"><i class="fa-solid fa-award" style="margin-right: 0.35rem;"></i> Palestra Magna de Encerramento do Congresso:</strong> "ÁGUA, ENERGIA E ECONOMIA CIRCULAR: ONDE NADA SE PERDE E TUDO SE CONECTA NA INDÚSTRIA"
                             <div class="kn-schedule-speaker-chip">
-                                <img src="{{ 'assets/img/palestrantes/rayone_oliveira.png' | relative_url }}" alt="Rayone Oliveira">
+                                <img src="{{ 'assets/img/palestrantes/rayone_oliveira.jpeg' | relative_url }}" alt="Rayone Oliveira">
                                 <span>Palestrante: Me. Rayone Wesly Santos de Oliveira (SENAI / LAQUA)</span>
                             </div>
                         </td>
