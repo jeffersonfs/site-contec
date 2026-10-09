@@ -1,5 +1,23 @@
 <!-- Hero Section (Banner Capa Site - BannerCapaSite1 Layout) -->
-<div class="kn-hero">
+<div class="kn-hero" id="contecHeroBanner">
+  <!-- Video de Fundo Animado (Executa uma única vez e permanece como plano de fundo) -->
+  <video
+    class="kn-hero-video-bg"
+    id="heroVideo"
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+    poster="{{ 'assets/img/planodefundo1.png' | relative_url }}"
+    aria-hidden="true"
+  >
+    <source src="{{ 'assets/img/video_animado.webm' | relative_url }}" type="video/webm">
+    <source src="{{ 'assets/img/video_animado.mp4' | relative_url }}" type="video/mp4">
+  </video>
+
+  <!-- Camada de sobreposição para contraste e suporte a tema escuro -->
+  <div class="kn-hero-overlay" aria-hidden="true"></div>
+
   <!-- Hero Main Banner Content -->
   <div class="kn-hero-content">
     <!-- Event Main Title -->
@@ -41,4 +59,58 @@
       </a>
     </div>
   </div>
+
+  <!-- Botão sutil para rever animação do banner -->
+  <button
+    id="heroVideoReplayBtn"
+    class="kn-hero-replay-btn"
+    type="button"
+    aria-label="Rever animação do banner"
+    title="Rever animação do banner"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+      <path d="M3 3v5h5"/>
+    </svg>
+    <span>Rever animação</span>
+  </button>
 </div>
+
+<script>
+  (function() {
+    const heroVideo = document.getElementById('heroVideo');
+    const replayBtn = document.getElementById('heroVideoReplayBtn');
+    if (!heroVideo) return;
+
+    // Garante propriedades cruciais para autoplay em todos os navegadores móveis e desktop
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
+
+    // Dispara a reprodução automática
+    const playPromise = heroVideo.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(function() {
+        // Se autoplay for bloqueado pelo navegador/modo economia, disponibiliza botão para iniciar
+        if (replayBtn) replayBtn.classList.add('is-visible');
+      });
+    }
+
+    // Ao finalizar a exibição do vídeo (executado uma única vez):
+    heroVideo.addEventListener('ended', function() {
+      // O vídeo para naturalmente no último quadro e se estabelece como imagem de fundo
+      heroVideo.classList.add('is-ended');
+      if (replayBtn) {
+        replayBtn.classList.add('is-visible');
+      }
+    });
+
+    // Permite que o usuário clique para rever a animação a qualquer momento se desejar
+    if (replayBtn) {
+      replayBtn.addEventListener('click', function() {
+        replayBtn.classList.remove('is-visible');
+        heroVideo.currentTime = 0;
+        heroVideo.play();
+      });
+    }
+  })();
+</script>
