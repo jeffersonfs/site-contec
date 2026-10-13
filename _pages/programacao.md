@@ -93,7 +93,7 @@ nav_order: 5
                     </p>
                 </div>
                 <div class="kn-banner-info-bar">
-                    <div class="kn-info-item"><i class="fa-solid fa-location-dot"></i> <span><strong>Local:</strong> Bloco Pedagógico / Salas Temáticas CCBL</span></div>
+                    <div class="kn-info-item"><i class="fa-solid fa-location-dot"></i> <span><strong>Local:</strong> Laboratório de Informática I (CCBL)</span></div>
                     <div class="kn-info-item"><i class="fa-solid fa-envelope"></i> <span>rafael.rc@ufma.br</span></div>
                 </div>
                 <div class="kn-banner-footer">
@@ -161,7 +161,7 @@ nav_order: 5
                     </p>
                 </div>
                 <div class="kn-banner-info-bar">
-                    <div class="kn-info-item"><i class="fa-solid fa-desktop"></i> <span><strong>Local:</strong> Laboratório de Informática (CCBL)</span></div>
+                    <div class="kn-info-item"><i class="fa-solid fa-desktop"></i> <span><strong>Local:</strong> Laboratório de Informática II (CCBL)</span></div>
                     <div class="kn-info-item"><i class="fa-solid fa-microchip"></i> <span><strong>Foco:</strong> BIM 3D/4D & Algoritmos de IA</span></div>
                 </div>
                 <div class="kn-banner-footer">
@@ -195,7 +195,7 @@ nav_order: 5
                     </p>
                 </div>
                 <div class="kn-banner-info-bar">
-                    <div class="kn-info-item"><i class="fa-solid fa-location-dot"></i> <span><strong>Local:</strong> Sala Temática Bloco Pedagógico (CCBL)</span></div>
+                    <div class="kn-info-item"><i class="fa-solid fa-location-dot"></i> <span><strong>Local:</strong> Auditório (CCBL)</span></div>
                     <div class="kn-info-item"><i class="fa-solid fa-award"></i> <span><strong>Público-alvo:</strong> Pesquisadores, graduandos e pós-graduandos</span></div>
                 </div>
                 <div class="kn-banner-footer">
